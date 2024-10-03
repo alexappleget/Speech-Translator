@@ -1,3 +1,4 @@
+import React, { JSX } from "react";
 import "./globals.css";
 
 export const metadata = {
@@ -5,14 +6,16 @@ export const metadata = {
   description: "Convert speech to text and translate.",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}): JSX.Element => {
   return (
     <html lang="en">
       <body>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;
